@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Register</title>
+</head>
+<body>
+    <h1>Admin Registration</h1>
+    <form method="post" action="../controller/registerCheck.php" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Admin Register</legend>
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" value="">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value="">
+            <input type="submit" name="submit" value="Register">
+        </fieldset>
+    </form>
+                <br>
+                <a href="login.html">Back to Login</a><br><br>
+            
+            <script>
+                function validate(){
+                    var username = document.getElementById('username').value;
+                    var password = document.getElementById('password').value;
+
+                    if(username == '' || username == null){
+                        alert('Username cannot be empty!');
+                        return false;
+                    }
+                    if(password == '' || password == null){
+                        alert('Password cannot be empty!');
+                        return false;
+                    }
+                    return true;
+                }
+    </script>
+    
+</body>
+</html>
